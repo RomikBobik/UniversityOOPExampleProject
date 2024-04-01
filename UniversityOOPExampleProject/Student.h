@@ -7,6 +7,18 @@ public:
 	int age;
 	double mark;
 
+	// default constructor
+	student() {
+
+		cout << "default constructor was calling" << endl;
+		name = "no name";
+		age = 6;
+		mark = 4;
+	
+	}
+
+
+
 	string convert() {
 		string s = "";
 		s += name;
