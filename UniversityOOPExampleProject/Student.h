@@ -8,16 +8,38 @@ public:
 	double mark;
 
 	// default constructor
-	student() {
+	//student() {
 
-		cout << "default constructor was calling" << endl;
-		name = "no name";
-		age = 6;
-		mark = 4;
-	
+	//	cout << "default constructor was calling" << endl;
+	//	name = "no name";
+	//	age = 6;
+	//	mark = 4;
+	//
+	//}
+
+	student(string nm) {
+
+		//cout << "constructor with arguments was calling" << endl''
+		name = nm;
+	}
+	student(string nm, int a) {
+
+		//cout << "constructor with arguments was calling" << endl''
+			name = nm;
+			age = a;
+	}
+	student(string nm, int a, double m) {
+
+		//cout << "constructor with arguments was calling" << endl''
+			name = nm;
+		age = a;
+		mark = m;
 	}
 
+	student(const student& Strudent) {
 
+
+	}
 
 	string convert() {
 		string s = "";

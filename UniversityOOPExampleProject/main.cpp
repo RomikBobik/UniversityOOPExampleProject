@@ -3,10 +3,10 @@
 
 
 int main() {
-	student st1;
-	student st2;
-	student st3;
-	student st4;
+	student st1("Artem");
+	student st2("Sasha");
+	student st3("Nikita");
+	student st4("Vovka");
 
 
 	st1.name = "Artem";
