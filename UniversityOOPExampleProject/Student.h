@@ -1,53 +1,57 @@
 #pragma once
 #include <string>
 using namespace std;
-class student {
+
+class Student {
 public:
 	string name;
 	int age;
 	double mark;
 
-	// default constructor
-	//student() {
+	// default constructor (конструктор по умолчанию)
+	Student() {
+		cout << "default constructor was calling" << endl;
+		name = "no name";
+		age = 6;
+		mark = 4;
+	}
 
-	//	cout << "default constructor was calling" << endl;
-	//	name = "no name";
-	//	age = 6;
-	//	mark = 4;
-	//
+	//Student(string nm) {
+	//	//cout << "constructor with arguments was calling" << endl;
+	//	name = nm;
 	//}
 
-	student(string nm) {
+	//Student(string nm, int a) {
+	//	//cout << "constructor with arguments was calling" << endl;
+	//	name = nm;
+	//	age = a;
+	//}
 
-		//cout << "constructor with arguments was calling" << endl''
+	// canonical constructor (канонический конструктор)
+	Student(string nm, int a = 14, double m = 4) {
+		cout << "canonical constructor with arguments was calling" << endl;
 		name = nm;
-	}
-	student(string nm, int a) {
-
-		//cout << "constructor with arguments was calling" << endl''
-			name = nm;
-			age = a;
-	}
-	student(string nm, int a, double m) {
-
-		//cout << "constructor with arguments was calling" << endl''
-			name = nm;
 		age = a;
 		mark = m;
 	}
 
-	student(const student& Strudent) {
+	//// copy-constructor (конструктор копирования)
+	//Student(const Student& student) {
 
+	//}
 
+	// destructor
+	~Student() {
+		cout << "destructor was calling" << endl;
+		// ...
 	}
 
 	string convert() {
 		string s = "";
 		s += name;
 		s += ": age = " + to_string(age);
+		s += ", mark = " + to_string(mark);
 
-		s += "mark = " + to_string(mark);
 		return s;
 	}
-	
 };
